@@ -23,6 +23,8 @@ thread2 = Contador("A", 15, 300)
 print("Iniciando thread1")
 thread1.start()
 
+# Fazendo a execução principal do programa esperar 5 segundos para só depois
+# ir para próxima linha.
 time.sleep(5)
 
 print("Iniciando thread2")
