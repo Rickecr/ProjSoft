@@ -49,10 +49,11 @@ def EscutaConexao():
 
         conexao.sendall("Digite seu Nick: ".encode('utf-8'))
         nick = conexao.recv(4096)
+        nick_name = nick.decode('utf-8').split("\n")[0]
 
-        print("Cliente %s conectado" % nick)
+        print("Cliente %s conectado" % nick_name)
         if (cliente):
-            thread = Thread(target=Cliente, args=(nick, conexao)).start()
+            thread = Thread(target=Cliente, args=(nick_name, conexao)).start()
 
 # Thread para escutar novas conexões de clientes.
 Thread(target=EscutaConexao).start()
