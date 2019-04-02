@@ -2,7 +2,7 @@ import socket,sys, os
 
 s = socket.socket()
 
-HOST = "192.168.0.4"
+HOST = "localhost"
 PORT = int(sys.argv[1] if len(sys.argv) > 1 else 9090)
 
 s.bind((HOST, PORT))
