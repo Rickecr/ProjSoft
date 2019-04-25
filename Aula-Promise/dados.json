@@ -1,0 +1,14 @@
+{
+    "nome" : "Aprendendo Promises",
+    "assuntos" : [
+        "fetch",
+        "then",
+        "promises",
+        "async",
+        "await"
+    ],
+    "links" : [
+        "dados1.json",
+        "dados2.json"
+    ]
+}
