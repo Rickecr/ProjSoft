@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aprendendo MVC e MVVM</title>
+</head>
+<body>
+    <script src="Controller.js"></script>
+
+    <style type="text/css">
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        #form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        #form * {
+            padding: 10px;
+        }
+        #form button {
+            margin: 10px;
+        }
+        #lstMsgs {
+            padding: 0px;
+        }
+        #lstMsgs li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid blue;
+            margin-bottom: 15px;
+            width: 150px;
+        }
+    </style>
+
+    <main>
+        <div id="form">
+            <span>Mensagem: </span> <input id="msg" type="text">
+            <span>Autor: </span> <input id="autor" type="text">
+            <button onclick="addMensagem()">Salvar</button>
+        </div>
+
+        <div id="mensagens">
+            <ul id="lstMsgs">
+
+            </ul>
+        </div>
+    </main>
+
+    <!-- type="module" => Para as variáveis não ficarem em escopo global. -->
+    <script type="module" src="app.js"></script>
+    
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    border: 2px solid red;
+    border-radius: 25px;
+    padding: 10px;
+    width: 200px;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+}
+
+section * {
+    padding: 10px;
+}
+
+input {
+    border-radius: 2px;
+}

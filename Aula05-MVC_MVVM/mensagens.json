@@ -1,0 +1,17 @@
+[
+    {
+        "mensagem" : "Oi, eu sou Rick",
+        "autor" : "Rickzinho",
+        "at" : "20:05"
+    },
+    {
+        "mensagem" : "Oi, eu sou um bot",
+        "autor" : "botzinho",
+        "at" : "20:06"
+    },
+    {
+        "mensagem" : "Que massa",
+        "autor" : "anônimo",
+        "at" : "21:10"
+    }
+]
