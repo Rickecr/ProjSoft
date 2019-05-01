@@ -1,0 +1,22 @@
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+#inputs span {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#inputs input {
+    margin-bottom: 10px;
+}

@@ -5,21 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Câmbio</title>
+    <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
 
-        <script type="module" src="app.js"></script>
-        <script type="module" src="cambio.js"></script>
-    
     <main>
         <div id="inputs">
-            <input id="inpReal" type="text" onkeyup="mudar()">
-            <input id="inpDolar" type="text" onkeyup="mudar()">
-            <input id="inpEuro" type="text" onkeyup="mudar()">
+            <span>Valor em Reais: </span><input id="inpReal" type="text" onkeyup="mudar()" placeholder="Valor em Reais">
+            <span>Valor em Dolar: </span><input id="inpDolar" type="text" onkeyup="mudar()" placeholder="Valor em Dolar">
+            <span>Valor em Euro: </span><input id="inpEuro" type="text" onkeyup="mudar()" placeholder="Valor em Euros">
         </div>
     </main>
 
-    
+    <script type="module" src="controller/app.js"></script>
 
 </body>
 </html>
