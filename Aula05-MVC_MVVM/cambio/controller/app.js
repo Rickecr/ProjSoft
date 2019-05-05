@@ -1,45 +1,34 @@
-let dados;
+import Model from '../model/model.js';
+
+let model = new Model();
 
 async function getModel() {
-    let response = await fetch("./model/cambio.json");
-    dados = await response.json();
-    
-    dados['getDolar'] = function getDolar(valorReal) {
-        return valorReal * this.dolar;
-    };
-    dados['getEuro'] = function getDolar(valorReal) {
-        return valorReal * this.euro;
-    };
-    dados['getRealDolar'] = function getRealDolar(valorDolar) {
-        return valorDolar / this.dolar;
-    };
-    dados['getRealEuro'] = function getRealEuro(valorEuro) {
-        return valorEuro / this.euro;
-    };
+    await model.getApi();
 }
-
-function Real() {
-    inpDolar.value = dados.getDolar(inpReal.value);
-    inpEuro.value = dados.getEuro(inpReal.value);
-}
-
-function Dolar() {
-    inpReal.value = dados.getRealDolar(inpDolar.value);
-    inpEuro.value = dados.getEuro(inpReal.value);
-}
-
-function Euro(params) {
-    inpReal.value = dados.getRealEuro(inpEuro.value);
-    inpDolar.value = dados.getDolar(inpReal.value);
-}
-
-const inpReal = document.getElementById('inpReal');
-inpReal.onkeyup = Real;
-
-const inpDolar = document.getElementById('inpDolar');
-inpDolar.onkeyup = Dolar;
-
-const inpEuro = document.getElementById('inpEuro');
-inpEuro.onkeyup = Euro;
 
 getModel();
+
+const inpDolar = document.getElementById('inpDolar');
+const inpEuro = document.getElementById('inpEuro');
+const inpReal = document.getElementById('inpReal');
+
+inpReal.onkeyup = () => {
+    let valorD = model.getRealParaDolar(inpReal.value);
+    inpDolar.value = valorD;
+    let valorE = model.getRealParaEuro(inpReal.value);
+    inpEuro.value = valorE;
+}
+
+inpDolar.onkeyup = () => {
+    let valorR = model.getDolarParaReal(inpDolar.value);
+    inpReal.value = valorR;
+    let valorE = model.getDolarParaEuro(inpDolar.value);
+    inpEuro.value = valorE;
+}
+
+inpEuro.onkeyup = () => {
+    let valorR = model.getEuroParaReal(inpEuro.value);
+    inpReal.value = valorR;
+    let valorE = model.getEuroParaDolar(inpEuro.value);
+    inpDolar.value = valorE;
+}
