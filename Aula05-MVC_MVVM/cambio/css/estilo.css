@@ -1,9 +1,53 @@
+html {
+    font-family: 'Quattrocento', serif;
+}
+
+body {
+    margin: 0px;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: aquamarine;
+    height: 130px;
+}
+
 main {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 450px;
+    
+    background-color: aqua;
+}
+
+main div > input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 3px;
+    margin-bottom: 5px;
+    height: 45px;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    height: 165px;
+    background: antiquewhite;
+    justify-content: center;
+    align-items: center;
+}
+
+footer * {
+    margin-bottom: 10px;
 }
 
 #inputs {
