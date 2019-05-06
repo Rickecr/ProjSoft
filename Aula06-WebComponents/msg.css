@@ -1,0 +1,24 @@
+:host {
+    background: #bfb;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 2px;
+    display: grid;
+    grid-template-areas: "mensagem mensagem"
+                         "at autor";
+    grid-gap: 10px;
+}
+
+p.mensagem {
+    grid-area: mensagem;
+}
+
+span.autor {
+    display: grid;
+    grid-area: autor;
+    justify-content: flex-end;
+}
+
+span.at {
+    grid-area: at;
+}

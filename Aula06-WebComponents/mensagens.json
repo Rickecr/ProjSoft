@@ -13,5 +13,15 @@
         "mensagem" : "Que massa",
         "autor" : "anônimo",
         "at" : "21:10"
+    },
+    {
+        "mensagem": "Começando com Web Components",
+        "autor": "Rick Elton",
+        "at": "19:54"
+    },
+    {
+        "mensagem": "Básico de Web Components",
+        "autor": "Rick Elton",
+        "at": "20:15"
     }
 ]

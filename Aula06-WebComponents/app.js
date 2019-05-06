@@ -5,9 +5,8 @@ function render() {
 
     mensagens.map((mensagem) => {
         let $html = `
-            <p>${mensagem.mensagem}</p>
-            <span>${mensagem.autor}</span>
-            <span>${mensagem.at}</span>
+            <ps-mensagem mensagem="${mensagem.mensagem}" autor="${mensagem.autor}" at="${mensagem.at}">
+            </ps-mensagem>
         `;
 
         let $div = document.createElement('div');
