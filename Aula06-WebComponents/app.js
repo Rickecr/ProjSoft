@@ -1,4 +1,5 @@
-import { getMensagens, mensagens } from "./mensagens.js";
+import { getMensagens, mensagens } from "./apiMensagem.js";
+import "./CompMensagem.js";
 
 function render() {
     let $msg = document.getElementById('listMsg');
