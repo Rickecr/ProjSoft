@@ -79,3 +79,19 @@
 
 - [X] Macro Tarefas(Eventos)
 - [X] Micro Tarefas(Promessas)
+
+## Parte 3: Padrão de Projeto MVC:
+> Entender o principal padrão de projeto não apenas da Web, mas de milhares de tipos de aplicações.
+
+- [X] Introdução ao MVC
+- [X] Praticando com a criação de uma aplicação de mensagens, muito parecido com um blog.
+- [X] Praticando com a criação de uma aplicação de câmbio, conversão de reais, euros e dólares.
+
+## Parte 4: Web Components:
+> O futuro da web são web components, portando é bom ter uma ótima base sobre como são criadas, assim como React, Vue usam para criação de seus próprios componentes. E assim escrever aplicações web modernas.
+
+- [X] Criando "Web Components" de uma maneira iniciante.
+- [X] Avançando para criações de Web Components utilizando o HTMLElement.
+- [X] Entendendo o funcionamento de Shadow DOM.
+  - [X] Criando Web Components sem escopo global, não sendo interferido pelo HTML/CSS/JS da página principal.
+- [X] Utilizar os Components em outras aplicações.
