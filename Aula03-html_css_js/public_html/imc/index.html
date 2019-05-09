@@ -6,18 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>IMC</title>
     <link rel="stylesheet" href="css/estyles.css">
-    <script src="js/index.js"></script>
+    <script type="module" src="controller/app.js"></script>
 </head>
 <body>
 
-    <section>
+    <div>
         <span>Altura: </span>
-        <input type="text" id="$altura" placeholder="Digite sua altura..." onkeyup="calculaImc()">
+        <input type="text" id="altura" placeholder="Digite sua altura..." >
         <span>Peso: </span>
-        <input type="text" id="$peso" placeholder="Digite sua peso..." onkeyup="calculaImc()">
+        <input type="text" id="peso" placeholder="Digite sua peso..." >
 
         <span id="resultado">Resultado: ?</span>
         <span id="status">Status: ?</span>
-    </section>
+    </div>
 </body>
 </html>
