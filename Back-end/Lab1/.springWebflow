@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<webflow-project-description>
+	<version>1</version>
+	<pluginVersion><![CDATA[3.9.8.201903260659-RELEASE]]></pluginVersion>
+	<configs>
+		<config>
+			<file>src/main/resources/templates/helloW.xml</file>
+			<name><![CDATA[helloW]]></name>
+		</config>
+	</configs>
+</webflow-project-description>
