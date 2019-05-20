@@ -28,4 +28,11 @@ public class HelloController {
         
         return "hello";
     }
+	
+	@GetMapping("/time")
+	public String time(Model model) {
+		LocalTime localTime = LocalTime.now();
+		model.addAttribute("time", localTime.toString());
+		return "time";
+	}
 }
