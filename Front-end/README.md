@@ -1,6 +1,6 @@
-# Projeto de Software
+# Projeto de Software - Front-End
 
-> Repositório da disciplina de Projeto de Software - 2019.1
+> Repositório da disciplina de Projeto de Software da parte de Front-End - 2019.1
 
 
 # Plano de Aula:
