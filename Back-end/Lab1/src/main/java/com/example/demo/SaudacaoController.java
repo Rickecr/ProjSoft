@@ -1,8 +1,9 @@
 package com.example.demo;
 
+import java.text.SimpleDateFormat;
 import java.time.LocalTime;
+import java.util.Date;
 
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -32,7 +33,7 @@ public class SaudacaoController {
 	
 	@RequestMapping("/timeJson")
 	public Time time() {
-		LocalTime localTime = LocalTime.now();
-		return new Time(localTime.toString());
+		SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+		return new Time(sdf.format(new Date()));
 	}
 }
