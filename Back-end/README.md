@@ -77,8 +77,11 @@ Ao final do lab você deve ter uma api que tem serviços para criar, atualizar, 
 - [X] - Criando o Model Produto.
 - [X] - Criando o DAO de Produto.
 - [X] - Criando o Service de Produto.
-- [X] - Criando o Controller de Produtos.
+- [X] - Criando o Controller de Produtos:
   - [X] - Create.
   - [X] - Read.
   - [X] - Update.
   - [X] - Delete.
+- [X] - Conexão com o banco de dados:
+  - [X] - H2
+- [X] - Testando com o Postman.
