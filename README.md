@@ -1,4 +1,4 @@
-# ProjSoft
+# Projeto de Software
 > Repositório Da disciplina Projeto de Software
 
 ## Front-End:
