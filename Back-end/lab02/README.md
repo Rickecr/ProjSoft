@@ -6,14 +6,20 @@ Vamos criar um CRUD de um produto, utilizando o spring boot e o hibernate. Vamos
 
 Ao final do lab você deve ter uma api que tem serviços para criar, atualizar, deletar e buscar um produto genérico. Você deve ter integração com algum banco de dados e você terá como opcional tratamento de exceptions que irá auxiliá-lo no seu projeto.
 
-- [X] - Criando o Model Produto.
-- [X] - Criando o DAO de Produto.
-- [X] - Criando o Service de Produto.
-- [X] - Criando o Controller de Produtos:
-  - [X] - Create.
-  - [X] - Read.
-  - [X] - Update.
-  - [X] - Delete.
-- [X] - Conexão com o banco de dados:
-  - [X] - H2
-- [X] - Testando com o Postman.
+- [X] Criando o Model Produto.
+- [X] Criando o DAO de Produto.
+- [X] Criando o Service de Produto.
+- [X] Criando o Controller de Produtos:
+  - [X] Create:
+    - [X] Cadastrar um novo produto(POST).
+  - [X] Read:
+    - [X] Buscar um produto especificado pelo ID(GET).
+    - [X] Retornar todos os produtos cadastrados(GET).
+  - [X] Update:
+    - [X] Atualizar um produto por completo(PUT).
+    - [X] Atualizar um produto parcialmente(PATCH).
+  - [X] Delete:
+    - [X] Deletar um produto pelo ID(DELETE).
+- [X] Conexão com o banco de dados:
+  - [X] H2
+- [X] Testando com o Postman.
