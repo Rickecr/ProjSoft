@@ -11,6 +11,6 @@ Sua tarefa aqui é criar uma aplicação Spring Boot, que contenha um controller
 
 A seguir, iremos introduzi-lo a uma sequência de passos para entender melhor como fazer isso, desde a instalação dos programas necessários até a programação de uma primeira rota simples. O resto é com você!
 
-- [X] - Instalação e entendimento.
-- [X] - Spring Boot na prática.
-- [X] - API Rest - @RestController e JSON.
+- [X] Instalação e entendimento.
+- [X] Spring Boot na prática.
+- [X] API Rest - @RestController e JSON.
