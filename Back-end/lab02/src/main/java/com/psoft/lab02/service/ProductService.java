@@ -1,5 +1,7 @@
 package com.psoft.lab02.service;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import com.psoft.lab02.Exception.Product.ProductNotFoundException;
@@ -55,6 +57,10 @@ public class ProductService {
 	
 	public Product findyById(long id) {
 		return this.productDAO.findById(id);
+	}
+	
+	public List<Product> getAll() {
+		return this.productDAO.findAll();
 	}
 	
 }

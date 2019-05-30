@@ -1,5 +1,7 @@
 package com.psoft.lab02.controller;
 
+import java.util.List;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -38,6 +40,15 @@ public class ProductController {
 		}
 		
 		return new ResponseEntity<Product>(product, HttpStatus.OK);
+	}
+	
+	@GetMapping(value = "/")
+	public ResponseEntity<List<Product>> getAll() {
+		try {
+			return new ResponseEntity<List<Product>>( this.productService.getAll(), HttpStatus.OK);
+		} catch (Exception e) {
+			throw new InternalError("Something went wrong");
+		}
 	}
 	
 	@PostMapping(value = "/")
