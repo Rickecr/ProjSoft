@@ -14,10 +14,10 @@ Ao final do lab você deve ter uma api que tem serviços para criar, atualizar, 
     - [X] Cadastrar um novo produto(POST).
   - [X] Read:
     - [X] Buscar um produto especificado pelo ID(GET).
-    - [X] Retornar todos os produtos cadastrados(GET).
+    - [X] Retornar todos os produtos cadastrados(GET). (EXTRA)
   - [X] Update:
     - [X] Atualizar um produto por completo(PUT).
-    - [X] Atualizar um produto parcialmente(PATCH).
+    - [X] Atualizar um produto parcialmente(PATCH). (EXTRA)
   - [X] Delete:
     - [X] Deletar um produto pelo ID(DELETE).
 - [X] Conexão com o banco de dados:
