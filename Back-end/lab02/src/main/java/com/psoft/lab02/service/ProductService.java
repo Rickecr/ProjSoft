@@ -29,6 +29,26 @@ public class ProductService {
 		return this.productDAO.save(productToUpdate);
 	}
 	
+	public Product updatePartial(Product product) throws ProductNotFoundException {
+		Product updatePartialProduct = this.productDAO.findById(product.getId());
+		
+		if (updatePartialProduct == null) {
+			throw new ProductNotFoundException("Produto não encontrado!");
+		}
+
+		if (product.getName() != null) {
+			updatePartialProduct.setName(product.getName());
+		}
+		if (product.getDescription() != null) {
+			updatePartialProduct.setDescription(product.getDescription());
+		}
+		if (product.getPrice() > 0) {
+			updatePartialProduct.setPrice(product.getPrice());
+		}
+		
+		return this.productDAO.save(updatePartialProduct);
+	}
+ 	
 	public void delete(long id) {
 		this.productDAO.deleteById(id);
 	}
