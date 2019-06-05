@@ -16,10 +16,12 @@ import org.springframework.security.web.authentication.AbstractAuthenticationPro
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.psoft.lab02.model.User;
+
+import com.psoft.lab02.model.Usuario;
+
 
 public class JWTLoginFilter extends AbstractAuthenticationProcessingFilter {
-
+	
 	protected JWTLoginFilter(String url, AuthenticationManager authManager) {
 		super(new AntPathRequestMatcher(url));
 		setAuthenticationManager(authManager);
@@ -29,14 +31,14 @@ public class JWTLoginFilter extends AbstractAuthenticationProcessingFilter {
 	public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response)
 			throws AuthenticationException, IOException, ServletException {
 		
-		User credentials = new ObjectMapper().readValue(request.getInputStream(), User.class);
-		
+		Usuario credentials = new ObjectMapper().readValue(request.getInputStream(), Usuario.class);
+			
 		return getAuthenticationManager().authenticate(
 				new UsernamePasswordAuthenticationToken(
 						credentials.getUsername(), 
 						credentials.getPassword(), 
 						Collections.emptyList()
-						)
+					)
 				);
 	}
 	

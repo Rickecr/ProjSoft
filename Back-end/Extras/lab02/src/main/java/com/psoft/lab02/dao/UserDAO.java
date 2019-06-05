@@ -1,21 +1,22 @@
 package com.psoft.lab02.dao;
 
-import java.io.Serializable;
+import java.util.List;
 
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import com.psoft.lab02.model.User;
+import com.psoft.lab02.model.Usuario;
 
 @Repository
-public interface UserDAO<T, ID extends Serializable> extends JpaRepository<User, Long> {
+public interface UserDAO extends CrudRepository<Usuario, String>{
 
-	public User save(User user);
+	public Usuario save(Usuario usuario);
 	
-	public User findById(long id);
+	public Usuario findByLogin(String login);
+	
+	public void deleteAll();
+	
+	public List<Usuario> findAll();
 
-	@Query("SELECT u FROM User u WHERE u.username = ?1")
-	public User usersForName(String username);
-	
 }
