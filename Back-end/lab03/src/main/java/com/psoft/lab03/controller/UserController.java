@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.psoft.lab03.Exception.user.UserNotFound;
 import com.psoft.lab03.model.LoginResponse;
 import com.psoft.lab03.model.User;
 import com.psoft.lab03.service.UserService;
@@ -33,12 +34,18 @@ public class UserController {
 	
 	@GetMapping(value = "/{login}")
 	public ResponseEntity<User> getUser(@PathVariable String login) {
+		User user = this.userService.findByLogin(login);
+		
+		if (user == null) {
+			throw new UserNotFound("Usuário não existe!");
+		}
+		
 		return new ResponseEntity<User>( this.userService.findByLogin(login), HttpStatus.OK);
 	}
 	
 	@PostMapping(value = "/")
 	@ResponseBody
-	public ResponseEntity<User> create(@RequestBody User user) throws ServletException {
+	public ResponseEntity<User> create(@RequestBody User user) {
 		return new ResponseEntity<User>( this.userService.create(user), HttpStatus.CREATED );
 	}
 }

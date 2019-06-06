@@ -6,6 +6,7 @@ import javax.servlet.ServletException;
 
 import org.springframework.stereotype.Service;
 
+import com.psoft.lab03.Exception.user.UserAlreadyExists;
 import com.psoft.lab03.dao.UserDAO;
 import com.psoft.lab03.model.User;
 
@@ -18,11 +19,11 @@ public class UserService {
 		this.userDAO = userDAO;
 	}
 
-	public User create(User user) throws ServletException {
+	public User create(User user) {
 		User u = this.userDAO.findByLogin(user.getLogin());
 
 		if (u != null) {
-			throw new ServletException("Usuário ja existe!");
+			throw new UserAlreadyExists("Usuário com esse login já existe!");
 		}
 
 		return this.userDAO.save(user);

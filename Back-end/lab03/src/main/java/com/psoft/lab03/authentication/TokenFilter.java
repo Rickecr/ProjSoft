@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.web.filter.GenericFilterBean;
 
+import com.psoft.lab03.Exception.TokenIncorrect;
+
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureException;
 
@@ -26,7 +28,7 @@ public class TokenFilter extends GenericFilterBean {
 			String header = req.getHeader("Authorization");
 
 			if(header == null || !header.startsWith("Bearer ")) {
-				throw new ServletException("Token inexistente ou mal formatado!");
+				throw new TokenIncorrect("Token inexistente ou mal formatado!");
 			}
 
 			// Extraindo apenas o token do cabecalho.
@@ -35,7 +37,7 @@ public class TokenFilter extends GenericFilterBean {
 			try {
 				Jwts.parser().setSigningKey("banana").parseClaimsJws(token).getBody();
 			} catch (SignatureException e) {
-				throw new ServletException("Token invalido ou expirado!");
+				throw new TokenIncorrect("Token invalido ou expirado!");
 			}
 
 			chain.doFilter(request, response);

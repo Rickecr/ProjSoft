@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.psoft.lab03.Exception.LoginIncorrect;
+import com.psoft.lab03.Exception.user.UserNotFound;
 import com.psoft.lab03.model.LoginResponse;
 import com.psoft.lab03.model.User;
 import com.psoft.lab03.service.UserService;
@@ -30,15 +32,15 @@ public class LoginController {
 	
 	@PostMapping(value = "/")
 	@ResponseBody
-	private LoginResponse authenticate(@RequestBody User user) throws ServletException {
+	private LoginResponse authenticate(@RequestBody User user) {
 		User u = this.userService.findByLogin(user.getLogin());
 		
 		if (u == null) {
-			throw new ServletException("Usuário não cadastrado!");
+			throw new UserNotFound("Usuário não cadastrado!");
 		}
 		
-		if (!(u.getSenha().equals(user.getSenha()) || u.getLogin().equals(user.getLogin()))) {
-			throw new ServletException("Autenticação incorreta!");
+		if (!(u.getSenha().equals(user.getSenha()))) {
+			throw new LoginIncorrect("Autenticação incorreta!");
 		}
 		
 		String token = Jwts.builder().
@@ -46,7 +48,7 @@ public class LoginController {
 				signWith(SignatureAlgorithm.HS512, TOKEN_KEY).
 				setExpiration(new Date(System.currentTimeMillis() + 1 * 60 * 1000))
 				.compact();
-		
+
 		return new LoginResponse(token);
 	}
 	
